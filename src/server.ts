@@ -23,7 +23,7 @@ const inputSchema = z.object({
   q: z.string().min(1).describe("Search query, e.g. `repo:octokit/rest.js path:src`"),                           
   sort: z.enum(["indexed"]).optional(),              
   order: z.enum(["asc", "desc"]).optional(),
-  per_page: z.number().int().min(1).max(25).optional(),
+  per_page: z.number().int().min(1).max(50).optional(),
   page: z.number().int().min(1).optional(),
   max_items: z.number().int().min(1).max(100).optional(),
   max_pages: z.number().int().min(1).optional(),
